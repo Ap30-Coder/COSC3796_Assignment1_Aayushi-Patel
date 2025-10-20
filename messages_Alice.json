@@ -1,0 +1,184 @@
+[
+  {
+    "direction": "sent",
+    "envelope_type": "session_key",
+    "encrypted_b64": "Q/zAij8pc2yViRUtysWwqBunyPSW1BB8wXIjVJbrUCoM91Dcs6IrdoTsY7SJHDbhiU2QWd4WZd+0HPLfOZosG1O58adHkp6NmOPVb8HUqngUG6UlTIeJqfPanvMabnHqVuXUfJpoHP6M0kDyqrguZWhtoQhwtZoxMqG7Le2dyupSkmQ/pGcecZ1GO6qUg4PzOtu3ccsPat6+PZKqgaejZ7WsA5o9WC3IKuqVTMbjRVjgoVu+/MTebYKC6yTVaET7ShPaWZlbEzUZtwiAmeFekcpojEzR+AwPGN+n/EbyHc3g9EFOYzUanC+VFDmoWMCINfgFkyaGgzbbUVBiwU5bkw==",
+    "decrypted_hex": "8ad893abbfbc2485fdd6c1a5d4977070fc31a2772d19b58b04af6c71e38f6124",
+    "timestamp": 1760895269.6714098
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "message",
+    "ciphertext_b64": "1M77H8ArxM+aoncwjfn/ECpjmxwtB9J6OOWlseHdgqo=",
+    "plaintext": "Hello Bob!",
+    "timestamp": 1760895269.6812239
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "session_key",
+    "encrypted_b64": "OPZd04mOeeMYEO1l7Eo/4DA9GOFh/Ku8PGQnI28/PvYXKbKY60HsOzY6rXhu/TkC2oCCoAKjbqiYe3/hFRelVTfbuHZfWuzBDSMcHYMgj379cSOW2yPJGZRzcRPLup0NrtrEkkFIuz2gPsu5jLp+UQ+4AUBTRXic4u+xCZHArVo5St/viu0hzXTB4c/cG9jgWYiOR3QdcVR68l62TZdGD7mcaMSMJnSjLbZjywuv1Qab7FKqcbOM4pOkM5ZJqeZFSpx3tgA1K85YJJgvsY9Wufs0cJTGlCOh112U2eahX+yn56a/bwlC3Ag9k6Pmd1hgxjnQ+Jqkqtkh2otFsj0Gdw==",
+    "decrypted_hex": "900eeb994dcb710fafb8e830c78cad8dc648507462b7ecbabeb201fc1ac51d3b",
+    "timestamp": 1760901880.088947
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "message",
+    "ciphertext_b64": "QvjxZ/tazdkxGEHbtxgI2Z9gHECKWgk5QRtw2GT0gjcakkmXo/Da9GztU/043qmdzzLkSMj7HneTezZRUFoSUQ==",
+    "plaintext": "Hello Bob! This is a test message.",
+    "timestamp": 1760901880.130293
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "session_key",
+    "encrypted_b64": "EbcCLqgeFFu4Vf3xdn2niHmaLKa55emwHX6aUc2SDLveybcgZslvqr+zDy21VIdyVlN5t4EunlQUoHKx/YrzXQNU5nQT+NtxXyipk+wi2wkGis0skOFZbKNaHlpf2Me9d4tznuPxvJM91/t2BkBAg2ejYYcEcVHbkoO4GY60HZxxv+tz2SjYAa4iTwfa545hCCZNl8Wb4gDxDu/bPLk/eiw2pZcZkXddvCbW5aTBAWRzsG0MOmvuTbE8FvxJJj/+/LCxdOwvL4d9QfSiPOrOF2+cHNNh8J03E+lFLm7arfgmDvhqH1Y0J4v2hihSxPyOSBSoIsrsz+GSYK80kNggwg==",
+    "decrypted_hex": "8ef26c6be3229e63b74b369109feb4ba7163a17a0fa1ee5249c14efb804cfc52",
+    "timestamp": 1760902056.9429462
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "message",
+    "ciphertext_b64": "PueYZmQcz8y1GxppPRXGglvtta/7oEiTii//VL0TiU4nMf7JlEb8VbqeqB+kwtP8",
+    "plaintext": "Hello Bob! This is Alice.",
+    "timestamp": 1760902057.021262
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "session_key",
+    "encrypted_b64": "g8aIaseg1OSsjeQ351qyp4ziHEZt7kfTdl1bxZmhx46pCTfZW2+8VFolwmEOshfvZq3K233wkAqM05kqhTKlkxn9YAE0ZnDeiDLXWlX/1vLFsmNw3ZZmoMTN7cbMIGGm04P3cGRCFNPRXRRFY8geTrPyARka3pmd11iOHHSOi4qhffXFcbbfv0jRDjMj05ybLBstuqCuKyKGlXzCUnMDYMmah1LuFuf8UKuXNIbP5l4sXexOqf/hmtiSsZx2q+B7dGm/PgSOMrmmna7zehSBGjO2qtiQ2ME7sX9j+4l5NW4VmF3Zryv48MhShbXgOq9RI3U+c/GRatXPcZE0o373Qw==",
+    "decrypted_hex": "3077b05e3000e656e2158aeb7bf69637b0521754ef8db590dd5912def0a72ab9",
+    "timestamp": 1760902615.3983
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "message",
+    "ciphertext_b64": "BFAHK5am0WPSoh/oOPvQE9t8wOQzqzvVwIX0/pG0xfSfpwTU5F/S84/26zHGz7weEMFDMGCcQnJcz6yX1MLgXA==",
+    "plaintext": "Hello again, Bob!Testing E2EE functionality.",
+    "timestamp": 1760902615.438206
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "session_key",
+    "encrypted_b64": "cMHA9xV5lBSDLUkv2c/RfmCf910L+dMGbyMLK2NmloSos8Z4pErxXF1njeZ4Y9ZcwqcTNWY2W4dD0/D6ckCLd51QWi4sgc0xmJitA7eTjXlun7tVti/ec7ZcAT+ZSzdh+IHH9WU0IQwRbBSkepLPSEEZJ9ynHQVRezaKFIyoxFa815EikxJPMvVq3nznCBmECnc+YljzZK5sKpmbEb0cU+KlbmB0CVswFaCRu/I5WOXDyrZp+PPxvf84RSVGnnG9ZqXlGBGo6E6Xwwco5p+rLYe22VMevHmvBbPJINFP+58AfzBgt+/BVegruV6OGKUJhXuR5/hJiN2sO+nQXN3tZQ==",
+    "decrypted_hex": "e3668ab3cf294cc0a7ee8ca82556faa452281acc386fa73a8f9e5f77cc0dd654",
+    "timestamp": 1760930221.3566961
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "message",
+    "ciphertext_b64": "RuIQqkL0p4Hlwh+Of6o9IQPDNHuqK+LzoK3FOGBz5I92KFtVyFbFaDtkQXb59vNL",
+    "plaintext": "Hi, Bob! Alice on this side.",
+    "timestamp": 1760930221.3990026
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "session_key",
+    "encrypted_b64": "b2C+BEu7Y+SmEkQhQBc1DVcnf+czShUHFE0jLRsM60QF8plx6PTq5uQhTy9JZW3fH01msP2GSIweibl7B25gFsLP4JUF15BYc1SFRTQpFw/BRjwwi7SyuU5ENd/djXPWFFnPexARi3bcmicbJOZk9Ppyj40x1Kze49PX/j4bYw3triSZezAi67gbewjoNrZ3UEq3Ax5AG45yQpZIG9cWmFEotVM5xxS/q0h+VDEFU5W2LluuSzZ0Cd0fYkv7ZqMxPfIrafD1PREw6haD7Xvc5/Op0i0XD7Hcqs0la5RjF4fnmmlsZ4Egx3dxDFiFn/2VxR5HCibpMCxADID8JN1txg==",
+    "decrypted_hex": "4c56553fef8f7e5f2fd19df59c8528432a5bafa81cf8a16a8a58e1bcca9317a8",
+    "timestamp": 1760930293.8193395
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "message",
+    "ciphertext_b64": "EiyTgkHYvxrHpdAvN+lxXwaJ03/RqYnhtagVRuG1qn3/RTFMD2IM8tCjd10Y7TYl",
+    "plaintext": "How are you doing today?",
+    "timestamp": 1760930293.8476036
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "session_key",
+    "encrypted_b64": "beOCo8jfrTOSkt12Cy6BCVGjMY+5yt4MO34mpLTPACl2HXXxS1ciTkEXY4BVIoKJvyr/f0RNWiufcG1lSM2JOBZlYom7M+gTU+b/NV7RdlQgEdOWTLqkwxP6PrF/RxLrWsA+Hp6aGS/vZpjWYfntVBeftUShimVOTIXgi4pMaZv+ilMhvbCxVa5qa1z2FuMXfQ+J0L74TsIEMQXb7nbHf7btdzbTSErCVRE0MAg0Mdg/gPE9iF47z5U3XwGrnwBHJrFHLs4CCNS1AIW3D71tnNGbEA5PMBZPBay7+95MVPaCyQl4bcUFa9KxMNWp1DR/Esl2EoCASGurTU0Q7G9TAQ==",
+    "decrypted_hex": "08feab4ea040d6d7c5dfc5ddc2f9df201fea57234a29090d0d806715b3522af8",
+    "timestamp": 1760930465.9652886
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "message",
+    "ciphertext_b64": "xCB+SPy6OxUiptLEupu9MJH+LfLfdFnhHWwY1mBTg34=",
+    "plaintext": "hyy",
+    "timestamp": 1760930466.0102453
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "session_key",
+    "encrypted_b64": "EWerLU8w+BKgNhamcdntoa7FaYna9DHPGi0FhuHc4V8WdlAJVm6zVn2nbg991LnZCJCwrsnr1qmk82CPBth+NKRj7wyQkc5qcVWa+ursrQ5hNMx0CVqRJxndh8+VeN19oxYSC9wFGamNiXb7ir5KIfsFHSuRmomzpwiJT+7TN2PFEEeRpSFlBNi21yy7jSk63n3vdCGrQtbBvEILAMuGSTGw8TOMglLKgFVnrMLKZSAWx6lVKgxaFxebebq+Cu1dhWWLKAFShoB4tUq/HE/QbOLTlZRKR6CTtnQE6JAlvk0py0EDqUbnukMrpJq1R/lwtezpRmrkZ+Cqv6Dy827m9Q==",
+    "decrypted_hex": "40edc8be4e75643488f2eca810ddf5e77e650eb38d37c95d232da61c1517621e",
+    "timestamp": 1760990991.073338
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "message",
+    "ciphertext_b64": "HdEy6ybBPq6zqkqACCfAPVFBOuPXEFTJy3h6kX5mFwW4zfVHOUARVFUhj8auOBWD",
+    "plaintext": "HI BOB! HOW IS IT GOING?",
+    "timestamp": 1760990991.0994964
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "session_key",
+    "encrypted_b64": "S7ASaj5w+lHD/yS2zRHhr85FcCJmcAae+3YbbS2nZurorNUijzPp3DJas01VwPXB7PiXZTno3sTvFW/2QhBqK2eZ9NnFq2B+ZYT4pnmvqXe+3vIkGIRrJL5ywaufkbY4q3VxdeuZ77KXG1bh5XppY4m8dx0sswYrciEHCVyGCYeWGnYXDbBu6hAQ5rTyFeoyaLVdVYk/WKe2C571eyja7gNauH3wUNGwhE789W9U9HkhaPlI5Nm394eI9bE+v8JAGrLgnkVclQFZ+AJVTjXYWQBkk/bXW013qoH46hEXgGfa/JlDmPcZF4GZ31SfJBjUeYRu7sx1Tt6H8ydjn+1suA==",
+    "decrypted_hex": "07e43e8efd7dc85b3bff030a7e0264c49c2b4ac114850aef32fdd793bfc53fda",
+    "timestamp": 1760991055.5434985
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "message",
+    "ciphertext_b64": "8re/vbfKProFWrI8LzMk0sSBJYfBCs/spgdSGULiHso=",
+    "plaintext": "i AM GOOD",
+    "timestamp": 1760991055.573102
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "session_key",
+    "encrypted_b64": "Vd0uMdHzCwN3bMg4wUCVQlKG90ADV+FsJIdOb1PEG7134qZIA4ivoSSE9sYzkoaQAJIToYK2OCBOZkkK+GnvE+RXE4yxqZxeZ8A311KfnhccT2VPzmKR7ZZHvMu4OeE62tUAKECWvh0D76EmnKvhKXVx0u1q0+6Y0FspvdMlfr1udF5RiBtAe/a06m99xT9WOVpZJRO8h1nz5lD0Jvj6HvitVHcERFsI6eV38HT7KfPucG3ztPbqsD02yN61GYEl9oI0LiUnyMGu9c3iw2H107rf8KW8ISBQ8kiOj80Z5iO4Tup8IgbP8Q6FOr/p5Wcv0uP/7V8gw7QSkbJxpURb7w==",
+    "decrypted_hex": "7fda84ae3dab483bdf6b3389e879692e416795135b7f60c5be19cf090dba2b65",
+    "timestamp": 1760991061.637
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "message",
+    "ciphertext_b64": "k44GL+T3N5G3tXLLDp3kuE09o4RELNG2++6FaNKX5dk=",
+    "plaintext": "SEE YOU SOON",
+    "timestamp": 1760991061.6606324
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "session_key",
+    "encrypted_b64": "AggJLtkdIIfNr9COQHJq4KJwvYEVzTsRTY2DkB1A7rAwOO8XfYbaqDCw9tuWUUqKyiXemp9QYi3IXuzyyNnrHnG+5XvFjSUspTNUgtZbeCovfCFENWUNd1k4L8cQa8gmanc5F2D3gh5ft0Uhqk18xnrh77WX//QJ3ESMlOPYt6Rs0mbA8nur6DLnCAflBXzwlIbzGEuzmruBjGHGBFYKLoKZNqbrgnutpEZUBEb6kTzqy+PJ6iNFnpAmxWwPrIUnFraVakABvJyQRxQLUEY3L9qqclFT3sPZeEMJUl+p93kxSK7U+tZAqGhOSPC0vdRFWBOjzHA61rI02f4is1EOgA==",
+    "decrypted_hex": "8f756822353289e9273b617bb112d6958865eb441a77536c72cd29cf3a35280b",
+    "timestamp": 1760991350.9532115
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "message",
+    "ciphertext_b64": "2Eo2eSzMQV5zKT4swNv79UFH83o1VtqIxa0rYW8D1fx3nHi9yNsXemeM648seecbgqw3mdTbnWdlokQB+HA4Aw==",
+    "plaintext": "Hi bob, how are you doing today ?",
+    "timestamp": 1760991351.010813
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "session_key",
+    "encrypted_b64": "AI97bbVt36JM+AwlqqSRpeUXmzZgyXAkTkBGwFW+QN9hsi5arjBlQT0PKwfmPwlJR6yrGv5j+50LpVDWyzn3EdAYGRA9eHocYpGcuGPMzQdAw/mxkkWHEGycruJK9tgEzLdZxcKoaCfKvU2d/tv9KPXneyg8Y12Kqfz8fxtesoe2G4udQEcWvXwpgBx63yZet4/FsjF/hzDkSKxCY5vhQsqH0KmbSQQdHLuepCj56lXfWlE0T5TlDbD9NSppIR5ivH/M7ZXCfB8muSBF+Vm3dSJQKFjRVhxLzqeGyjx+4R8XpyBTb0lRmB9hqsNMLvb3pDjOEFtcwpAk2Xg0Qrz19A==",
+    "decrypted_hex": "1cd9fd9ca7e5a21e2ec10acdb347a5a422554064d893b1f866c47a41d2fc1249",
+    "timestamp": 1760991385.6530704
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "message",
+    "ciphertext_b64": "nBqEjXWUV6u83on9eykx6Q1yAfLKKS46q6s4zt7/V+e6CL9J/N56I2NaqgfxWSyz",
+    "plaintext": "I am well what about you ?",
+    "timestamp": 1760991385.6938236
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "session_key",
+    "encrypted_b64": "jn1zJ2uMoaQxJijAXEPqXQeaRRc7MW7LhNM9NANhN80YcEIHJdtfOXta0fb97CUDBAHezfEu0WxIS+pfPjYbxkGkgvV7h2UxjTDaKgAvmiyfENK7jNl8S9r4sKQPJp2AWXiyOZpdNKRV3Qxfy/iIvlEMm+BdFCXzytykQ+pxoyxnGwcnOlFM6FsQ7Z4RdbXYor+LaICR85MoRrr8xpqWPPw61x9aTArdiBsBVtEg/DC6v6fyshgcAFXC971bUmHFJ/+uuYUcc0+9DSz5pRAwAGBaj7sGXChRVI4dykoj3dqe293qY9nSjK9/68jB6ACCDiyocf+AKFMV2B33l1a2AA==",
+    "decrypted_hex": "733bb9af2d6d6c5df378393bfd5f9d85c19ae4ae908ddee2b8d4ec31d6c87843",
+    "timestamp": 1760991392.1135585
+  },
+  {
+    "direction": "sent",
+    "envelope_type": "message",
+    "ciphertext_b64": "QasgAxHH5tw5cblKdcel2Px8cQ7xwdRuDNvs2pgTJhZ9bHBpGBO+aljtPmW0PReb",
+    "plaintext": "thanks have a good day",
+    "timestamp": 1760991392.1444056
+  }
+]

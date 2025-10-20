@@ -1,4 +1,3 @@
-# server.py
 import socket
 import threading
 import json
@@ -6,14 +5,12 @@ import json
 HOST = '127.0.0.1'
 PORT = 9000
 
-# Simple in-memory store: name -> (conn, addr, public_key_pem)
 clients = {}
 clients_lock = threading.Lock()
 
 def handle_client(conn, addr):
     try:
         with conn:
-            # first message must be a json register message
             data = conn.recv(65536)
             if not data:
                 return
@@ -24,15 +21,12 @@ def handle_client(conn, addr):
                 with clients_lock:
                     clients[name] = {'conn': conn, 'addr': addr, 'public_key_pem': pubkey}
                 print(f"[SERVER] Registered {name} from {addr}")
-                # keep connection open to forward incoming messages from this client
                 while True:
                     raw = conn.recv(65536)
                     if not raw:
                         break
                     envelope = json.loads(raw.decode('utf-8'))
-                    # log incoming encrypted payload (server must not decrypt)
                     print(f"[SERVER] Received envelope from {name}: {json.dumps(envelope)[:300]}")
-                    # route to target if connected
                     target = envelope.get('target')
                     if target:
                         with clients_lock:
@@ -40,7 +34,6 @@ def handle_client(conn, addr):
                         if target_info:
                             try:
                                 target_conn = target_info['conn']
-                                # forward the full envelope as-is
                                 target_conn.sendall(json.dumps(envelope).encode('utf-8'))
                                 print(f"[SERVER] Forwarded message from {name} to {target}")
                             except Exception as e:
@@ -52,7 +45,6 @@ def handle_client(conn, addr):
     except Exception as e:
         print("[SERVER] Client handler error:", e)
     finally:
-        # cleanup: remove any client that had this conn
         remove = None
         with clients_lock:
             for nm, info in list(clients.items()):

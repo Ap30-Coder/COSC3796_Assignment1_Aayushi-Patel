@@ -1,4 +1,3 @@
-# client.py
 import socket
 import json
 import argparse
@@ -45,7 +44,6 @@ def save_messages_log(entry):
     with open(MESSAGES_FILE,'w') as f:
         json.dump(logs, f, indent=2)
 
-# generate or load RSA keys
 def load_or_create_keys():
     if os.path.exists(priv_path) and os.path.exists(pub_path):
         with open(priv_path,'rb') as f:
@@ -92,7 +90,7 @@ def aes_encrypt(aes_key, plaintext):
     padded = padder.update(plaintext.encode()) + padder.finalize()
     cipher = Cipher(algorithms.AES(aes_key), modes.CBC(iv), backend=default_backend())
     enc = cipher.encryptor().update(padded) + cipher.encryptor().finalize()
-    return iv + enc  # prepend iv
+    return iv + enc
 
 def aes_decrypt(aes_key, data):
     iv = data[:16]
@@ -110,15 +108,12 @@ def recv_loop(sock):
                 time.sleep(0.1)
                 continue
             envelope = json.loads(raw.decode('utf-8'))
-            # If it's session key delivery
             if envelope.get('type') == 'session_key':
                 enc_session_b64 = envelope['session_key_b64']
                 enc_session = base64.b64decode(enc_session_b64)
                 session_key = rsa_decrypt(enc_session)
                 print(f"\n[{NAME}] Received encrypted session key (base64): {enc_session_b64}")
                 print(f"[{NAME}] Decrypted session key (hex): {session_key.hex()}")
-                # store for target
-                # save to file
                 save_messages_log({
                     'direction': 'received',
                     'envelope_type': 'session_key',
@@ -126,7 +121,6 @@ def recv_loop(sock):
                     'decrypted_hex': session_key.hex(),
                     'timestamp': time.time()
                 })
-                # keep session key in memory (for simplicity, single session)
                 global CURRENT_SESSION_KEY
                 CURRENT_SESSION_KEY = session_key
             elif envelope.get('type') == 'message':
@@ -138,7 +132,6 @@ def recv_loop(sock):
                     'ciphertext_b64': ciphertext_b64,
                     'timestamp': time.time()
                 })
-                # decrypt if we have session key
                 if 'CURRENT_SESSION_KEY' in globals():
                     ct = base64.b64decode(ciphertext_b64)
                     try:
@@ -163,10 +156,8 @@ def recv_loop(sock):
 def main():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((SERVER, PORT))
-    # register
     register = {'type':'register','name': NAME, 'public_key_pem': public_pem.decode('utf-8')}
     s.sendall(json.dumps(register).encode('utf-8'))
-    # start receive loop
     t = threading.Thread(target=recv_loop, args=(s,), daemon=True)
     t.start()
     print(f"[{NAME}] Registered with server and listening for messages.")
@@ -174,31 +165,19 @@ def main():
         if not TARGET:
             print("[sender] pass --target TARGETNAME")
             return
-        # main loop: type messages and send session key + message
         while True:
             text = input(f"[{NAME}] Type message to {TARGET} (or 'quit'): ")
             if text.strip().lower() == 'quit':
                 break
-            # 1) create AES session key
-            aes_key = secrets.token_bytes(32)  # AES-256
-            # 2) ask server for target's public key by sending a "request_pubkey" envelope (we don't have direct api, but server stored it)
-            # For simplicity: we assume the server stored the public key and will forward a session_key envelope containing encrypted session to the target.
-            # But we need target's public key to encrypt here; in this simple design we request from server using the internal memory (not allowed)
-            # To keep packet simple: we send the encrypted session to server which will forward to target (server doesn't need to inspect)
-            # To encrypt session, we still need target's public key - we will send a "get_pubkey" request and server will not reply; so instead we will expect user to ensure target is already registered and we will ask server for the stored public key via the connection (one-step simple RPC).
-            # We'll implement a simple local request: send a request to server to fetch key by sending {'type':'get_pubkey','target': TARGET}
-            # However server.py doesn't implement replies. To keep assignment requirements simple, we will *include* the target's public key inside the client-side memory by reading directly from a file keys_{TARGET}/public_key.pem if it exists locally. This mirrors a real deployment where you either fetch or already have target's public key.
+            aes_key = secrets.token_bytes(32)
             target_pub_path = f'keys_{TARGET}/public_key.pem'
             if not os.path.exists(target_pub_path):
                 print("[sender] Target public key not found locally. Ensure receiver registered and public key file present at", target_pub_path)
-                print("[sender] (In practice, you would request public key from server; for this simple assignment, copy the receiver's public key file into the folder.)")
                 continue
             with open(target_pub_path,'rb') as f:
                 target_pub = f.read()
-            # encrypt session with target's pubkey
             enc_session = rsa_encrypt(target_pub, aes_key)
             enc_session_b64 = base64.b64encode(enc_session).decode('utf-8')
-            # send a session_key envelope to target via server
             session_envelope = {
                 'type':'session_key',
                 'from': NAME,
@@ -214,7 +193,6 @@ def main():
                 'decrypted_hex': aes_key.hex(),
                 'timestamp': time.time()
             })
-            # now encrypt the message with AES and send as a message envelope
             ciphertext = aes_encrypt(aes_key, text)
             ct_b64 = base64.b64encode(ciphertext).decode('utf-8')
             message_envelope = {
@@ -234,7 +212,6 @@ def main():
             })
             print(f"[{NAME}] Sent encrypted message to {TARGET}.")
     else:
-        # receiver: just keep running, we already have recv_loop running
         print(f"[{NAME}] Receiver running. Waiting for messages. (Press Ctrl+C to exit)")
         try:
             while True:
